@@ -1,25 +1,23 @@
-#include <cassert>
+#include <iostream>
+using namespace std;
 
-int binary_search(const int seq[], const int num, int high, int low) {
-  while (high - low > 1) {
-    const int mid = (high + low) / 2;
-    if (seq[mid] < num)
-      low = mid + 1;
-    else
-      high = mid;
-  }
-  if (high == num)
-    return high;
-  return low;
+int search(int arr[], int l, int r, int key)
+{
+	int num1;
+	bool bool1 = false;
+	while ((l <= r) && (bool1 != true))
+  {
+		num1 = (l + r) / 2;
+		if (arr[num1] == key) bool1 = true;
+		if (arr[num1] > key) r = num1 - 1;
+		else l = num1 + 1;
+	}
+	return (num1 - 2);
 }
 
-int main() {
-  int seq[10];
-  for(auto i = 0; i < 10; ++i)
-    seq[i] = i;
-
-  assert(binary_search(seq, 6, 9, 0) == 6);
-  assert(binary_search(seq, 1, 9, 0) == 1);
-
-  return 0;
+int main()
+{
+    int cif[10] = {5, 11, 45, 25, 12, 1, 86, 85, 81, 10};
+    int massize = sizeof(cif) / sizeof(cif[0]);
+    cout << "12 is located at position " << search(cif, 0, massize, 12) << " (starting with position 0)\n";
 }

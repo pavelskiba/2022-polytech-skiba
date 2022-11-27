@@ -1,5 +1,6 @@
-Without virtual
+## Without `virtual`
 
+```
 Person::ctor
 Teacher::ctor
 Person::ctor
@@ -8,12 +9,15 @@ Student::dtor
 Person::dtor
 Teacher::dtor
 Person::dtor
+```
 
-With virtual
+## With `virtual`
 
+```
 Person::ctor
 Teacher::ctor
 Student::ctor
 Student::dtor
 Teacher::dtor
 Person::dtor
+```

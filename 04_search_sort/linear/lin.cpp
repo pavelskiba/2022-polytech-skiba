@@ -1,28 +1,30 @@
 #include <iostream>
 using namespace std;
-
 int search(int arr[], int n, int x, int result[])
 {
-  int b;
-  for (int i = 0; i < n; i++)
-  {
-    if (arr[i] == x)
+    int a = 0;
+    for (int i = 0; i <= n; i++)
     {
-      b = i;
+        if (arr[i] == x)
+        {
+            result[a] = i;
+            a++;
+        }
     }
-  }
-  return b;
+    return a;
 }
-
-
 int main()
 {
-  int cif[10] = {5, 11, 45, 25, 12, 1, 86, 85, 81, 10};
-  int massize = sizeof(cif) / sizeof(cif[0]);
-  int result[massize];
-  for (int i = 0; i < massize; ++i)
-  {
-    result[i] = 0;
-  }
-  cout << "12 is located at " << search(cif, massize, 12, result) << endl << " (if starting with 0)" << '\n';
+    int m[11] = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 19}; 
+    const int arrsize = sizeof(m) / sizeof(m[0]); // находим длину массива
+    int result[arrsize]; // создаём массив result и заполняем его нулями
+    for (int i = 0; i < arrsize; ++i)
+    {
+        result[i] = 0;
+    }
+    cout << "Count: " << search(m, arrsize, 19, result) << endl << "id : " << endl; // выводим количество найденных элементов и их номера
+    for (int i = 0; i < arrsize; ++i)
+    {
+        cout << result[i] << endl;
+    }
 }

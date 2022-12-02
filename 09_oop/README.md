@@ -3,12 +3,16 @@
 ```
 Person::ctor
 Teacher::ctor
-Person::ctor
 Student::ctor
+TA::ctor
+2
+5
+Andrey Panchenko  and Sasha Ekordin
+TA::dtor
 Student::dtor
-Person::dtor
 Teacher::dtor
 Person::dtor
+
 ```
 
 ## With `virtual`
@@ -17,6 +21,12 @@ Person::dtor
 Person::ctor
 Teacher::ctor
 Student::ctor
+TA::ctor
+2
+5
+DefaultName 
+Andrey Panchenko and Sasha Ekordin
+TA::dtor
 Student::dtor
 Teacher::dtor
 Person::dtor

@@ -23,7 +23,6 @@ struct TA : Teacher, Student {};
 int main() {
   TA ta;
   ta.score = 5.0;
-  // ta.name = "Da Sha";
 
   return 0;
 }
